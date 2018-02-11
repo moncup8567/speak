@@ -1,0 +1,41 @@
+<form #addForm="ngForm" (ngSubmit)="add(addForm)" novalidate>
+
+  <div class="modal-header">
+
+    <span class="modal-title" id="dismiss-modal-title">ประเภทของภาษา</span>
+
+    <button type="button" class="close" (click)="cloas()" aria-label="Close">
+
+      <span aria-hidden="true">&times;</span>
+
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <div class="form-group">
+
+      <label>ชื่อ: </label>
+
+      <input type="text" class="form-control" name="nameCategory" ngModel (ngModel)="dataEdit?.value.nameCategory" placeholder="ชื่อ">
+
+    </div>
+
+    <div class="form-group">
+
+      <label>รายละเอียด:</label>
+
+      <input type="text" class="form-control" name="descriptionCategory" ngModel (ngModel)="dataEdit?.value.descriptionCategory" placeholder="รายละเอียด">
+
+    </div>
+
+  </div>
+
+  <div class="modal-footer">
+
+    <button type="submit" class="btn btn-primary" id="dismiss-modal-button" name="ok">ตกลง</button>
+
+  </div>
+
+</form>

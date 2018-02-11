@@ -1,0 +1,50 @@
+<div class="container">
+
+  <h2>จัดการข้อมูลกลุ่มของการเรียนภาษา</h2>
+
+  <button type="button" class="btn btn-primary" (click)="add()" >เพิ่มข้อมูล</button>
+
+  <table class="table table-hover">
+
+    <thead>
+
+      <tr>
+
+        <th></th>
+
+        <th>รหัส</th>
+
+        <th>ชื่อ</th>
+
+        <th>รายละเอียด</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let data of categoryInfo; let i = index"> 
+
+        <td>
+
+          <button type="button" (click)="edit(data)" class="btn btn-primary">แก้ไข</button>
+
+          <button type="button" (click)="delete(data)" class="btn btn-danger">ลบ</button>
+        </td>
+
+        <td>{{i + 1}}</td>
+
+        <td>{{data.value.nameCategory}}</td>
+
+        <td>{{data.value.descriptionCategory}}</td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <a class="btn btn-danger" role="button">ไปยังหน้าแรก</a>
+
+</div>
